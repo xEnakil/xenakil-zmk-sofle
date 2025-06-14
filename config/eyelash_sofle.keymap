@@ -36,6 +36,22 @@
     behaviors {
     };
 
+    macros {
+        NextDesktop: NextDesktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+
+            label = "NEXTDESKTOP";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,11 +70,11 @@
 
         Second {
             bindings = <
-&kp F1      &kp F2           &kp F3          &kp F4           &kp F5           &kp F6             &mmv MOVE_UP     &kp F7           &kp F8           &kp F9        &kp F10    &kp F11           &kp F12
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp PAGE_DOWN    &kp HOME      &kp END    &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &kp CAPSLOCK     &kp PRINTSCREEN  &mkp MB5           &mmv MOVE_LEFT   &kp LEFT_ARROW   &kp DOWN         &kp UP_ARROW  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT    &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans        &trans     &trans
+&kp F1      &kp F2     &kp F3     &kp F4        &kp F5           &kp F6      &mmv MOVE_UP     &kp F7          &kp F8         &kp F9        &kp F10    &kp F11    &kp F12
+&trans      &kp GRAVE  &mkp LCLK  &mkp MCLK     &mkp RCLK        &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP       &kp PAGE_DOWN  &kp HOME      &kp END    &kp MINUS  &kp EQUAL
+&trans      &trans     &trans     &kp CAPSLOCK  &kp PRINTSCREEN  &mkp MB5    &mmv MOVE_LEFT   &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans     &trans
+&trans      &trans     &trans     &trans        &trans           &trans      &mmv MOVE_RIGHT  &trans          &trans         &trans        &trans     &trans     &trans
+&kp C_MUTE  &trans     &trans     &trans        &trans           &trans      &mkp LCLK        &trans          &trans         &trans        &trans     &trans
             >;
 
             display-name = "Second";
@@ -71,7 +87,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_COLOR_HSB(360,100,50)
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_TOG
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &NextDesktop     &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;

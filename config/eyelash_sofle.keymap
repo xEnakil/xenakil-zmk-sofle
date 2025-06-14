@@ -39,86 +39,16 @@
     macros {
         NextDesktop: NextDesktop {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+
             label = "NEXTDESKTOP";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LCTRL>,
-                <&macro_press LGUI>,
-                <&macro_tap RIGHT>,
-                <&macro_release LGUI>,
-                <&macro_release LCTRL>;
-
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
-
-        PrevDesktop: PrevDesktop {
-            compatible = "zmk,behavior-macro";
-            label = "PREVDESKTOP";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LCTRL>,
-                <&macro_press LGUI>,
-                <&macro_tap LEFT>,
-                <&macro_release LGUI>,
-                <&macro_release LCTRL>;
-
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
-
-        AppSwitcher: AppSwitcher {
-            compatible = "zmk,behavior-macro";
-            label = "APPSWITCH";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LGUI>,
-                <&macro_tap TAB>,
-                <&macro_release LGUI>;
-
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
-
-        CreateDesktop: CreateDesktop {
-            compatible = "zmk,behavior-macro";
-            label = "CREATEDESKTOP";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LCTRL>,
-                <&macro_press LGUI>,
-                <&macro_tap D>,
-                <&macro_release LGUI>,
-                <&macro_release LCTRL>;
-
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
-
-        DeleteDesktop: DeleteDesktop {
-            compatible = "zmk,behavior-macro";
-            label = "DELETEDESKTOP";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LCTRL>,
-                <&macro_press LGUI>,
-                <&macro_tap F4>,
-                <&macro_release LGUI>,
-                <&macro_release LCTRL>;
-
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
-
-        AltF4: AltF4 {
-            compatible = "zmk,behavior-macro";
-            label = "ALTF4";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press LALT>,
-                <&macro_tap F4>,
-                <&macro_release LALT>;
-
             wait-ms = <10>;
             tap-ms = <15>;
         };
@@ -155,11 +85,11 @@
 
         Third {
             bindings = <
-&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_UP     &trans  &trans        &trans        &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans  &trans        &trans        &trans  &trans  &trans
-&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &trans  &trans        &trans        &trans  &trans  &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR    &mmv MOVE_RIGHT  &trans  &trans        &trans        &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &PrevDesktop  &NextDesktop  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_UP     &trans  &trans  &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans  &trans  &trans        &trans  &trans  &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &trans  &trans  &trans        &trans  &trans  &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR    &mmv MOVE_RIGHT  &trans  &trans  &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &trans  &NextDesktop  &trans  &trans
             >;
 
             display-name = "Third";

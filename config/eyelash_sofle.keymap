@@ -37,21 +37,91 @@
     };
 
     macros {
-        NextDesktop: NextDesktop {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+      NextDesktop: NextDesktop {
+          compatible = "zmk,behavior-macro";
+          label = "NEXTDESKTOP";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LCTRL
+              &macro_press LGUI
+              &macro_tap RIGHT
+              &macro_release LGUI
+              &macro_release LCTRL
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
 
-            label = "NEXTDESKTOP";
-            wait-ms = <10>;
-            tap-ms = <15>;
-        };
+      PrevDesktop: PrevDesktop {
+          compatible = "zmk,behavior-macro";
+          label = "PREVDESKTOP";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LCTRL
+              &macro_press LGUI
+              &macro_tap LEFT
+              &macro_release LGUI
+              &macro_release LCTRL
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
+
+      AppSwitcher: AppSwitcher {
+          compatible = "zmk,behavior-macro";
+          label = "APPSWITCH";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LGUI
+              &macro_tap TAB
+              &macro_release LGUI
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
+
+      ShowDesktop: ShowDesktop {
+          compatible = "zmk,behavior-macro";
+          label = "SHOWDESKTOP";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LCTRL
+              &macro_press LGUI
+              &macro_tap D
+              &macro_release LGUI
+              &macro_release LCTRL
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
+
+      CloseApp: CloseApp {
+          compatible = "zmk,behavior-macro";
+          label = "CLOSEAPP";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LCTRL
+              &macro_press LGUI
+              &macro_tap F4
+              &macro_release LGUI
+              &macro_release LCTRL
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
+
+      AltF4: AltF4 {
+          compatible = "zmk,behavior-macro";
+          label = "ALTF4";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press LALT
+              &macro_tap F4
+              &macro_release LALT
+          >;
+          wait-ms = <10>;
+          tap-ms = <15>;
+      };
     };
 
     keymap {

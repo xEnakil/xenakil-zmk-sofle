@@ -46,11 +46,84 @@
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+                <&kp LEFT_GUI &kp LEFT_CONTROL>,
+                <&macro_press>;
 
             label = "NEXTDESKTOP";
             wait-ms = <0>;
             tap-ms = <0>;
+        };
+
+        PrevDesktop: PrevDesktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_CONTROL>;
+
+            label = "PREVDESKTOP";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        CreateDesktop: CreateDesktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LEFT_GUI)>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LC(LEFT_GUI)>;
+
+            label = "CREATEDESKTOP";
+        };
+
+        DeleteDesktop: DeleteDesktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LC(LEFT_GUI)>,
+                <&macro_tap>,
+                <&kp F4>,
+                <&macro_release>,
+                <&kp LC(LEFT_GUI)>;
+
+            label = "DELETEDESKTOP";
+        };
+
+        AltF4: AltF4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp F4>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALTF4";
+        };
+
+        AppSwitcher: AppSwitcher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "APPSWITCHER";
         };
     };
 
@@ -59,11 +132,11 @@
 
         Main {
             bindings = <
-&kp ESC           &kp N1      &kp N2  &kp N3  &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7    &kp N8     &kp N9            &kp N0             &kp BACKSPACE
-&kp TAB           &kp Q       &kp W   &kp E   &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U     &kp I      &kp O             &kp P              &kp BSLH
-&kp LEFT_SHIFT    &kp A       &kp S   &kp D   &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J     &kp K      &kp L             &kp SEMI           &kp APOS
-&kp LEFT_CONTROL  &kp Z       &kp X   &kp C   &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M     &kp COMMA  &kp DOT           &kp FSLH           &kp ENTER
-&kp C_MUTE        &kp DELETE  &trans  &trans  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kt LEFT  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ESC           &kp N1      &kp N2  &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7    &kp N8     &kp N9            &kp N0             &kp BACKSPACE
+&kp TAB           &kp Q       &kp W   &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U     &kp I      &kp O             &kp P              &kp BSLH
+&kp LEFT_SHIFT    &kp A       &kp S   &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J     &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LEFT_CONTROL  &kp Z       &kp X   &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M     &kp COMMA  &kp DOT           &kp FSLH           &kp ENTER
+&kp C_MUTE        &kp DELETE  &mo 2   &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kt LEFT  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -85,11 +158,11 @@
 
         Third {
             bindings = <
-&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_UP     &trans  &trans  &trans        &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans  &trans  &trans        &trans  &trans  &trans
-&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &trans  &trans  &trans        &trans  &trans  &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR    &mmv MOVE_RIGHT  &trans  &trans  &trans        &trans  &trans  &trans
-&trans           &trans           &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &trans  &NextDesktop  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_UP     &trans  &trans        &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans  &trans        &trans        &trans  &trans  &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &trans  &trans        &trans        &trans  &trans  &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR    &mmv MOVE_RIGHT  &trans  &trans        &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &PrevDesktop  &NextDesktop  &trans  &trans
             >;
 
             display-name = "Third";

@@ -85,11 +85,11 @@
 
         Third {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_UP     &trans           &trans           &trans           &trans           &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans           &trans           &trans           &trans           &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_ON
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_OFF
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &NextDesktop     &trans           &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_UP     &trans  &trans  &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans  &trans  &trans        &trans  &trans  &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF    &mmv MOVE_LEFT   &trans  &trans  &trans        &trans  &trans  &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR    &mmv MOVE_RIGHT  &trans  &trans  &trans        &trans  &trans  &trans
+&trans           &trans           &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &trans  &NextDesktop  &trans  &trans
             >;
 
             display-name = "Third";

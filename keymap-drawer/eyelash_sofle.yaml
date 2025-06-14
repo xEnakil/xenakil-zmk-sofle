@@ -169,7 +169,7 @@ layers:
   - RGB SPI
   - RGB SAI
   - RGB HUI
-  - RGB COLOR HSB(360,100,50)
+  - RGB ON
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -182,7 +182,7 @@ layers:
   - RGB SPD
   - RGB SAD
   - RGB HUD
-  - RGB TOG
+  - RGB OFF
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}

@@ -49,6 +49,8 @@
                 <&kp LEFT_GUI &kp LEFT_CONTROL>;
 
             label = "NEXTDESKTOP";
+            wait-ms = <10>;
+            tap-ms = <15>;
         };
     };
 
@@ -85,12 +87,13 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_UP     &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_DOWN   &trans           &trans           &trans           &trans           &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_COLOR_HSB(360,100,50)
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_TOG
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT   &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_ON
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_RIGHT  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_OFF
 &trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans           &trans           &NextDesktop     &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "Third";
         };
     };
 };

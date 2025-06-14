@@ -37,6 +37,7 @@
     };
 
     macros {
+
       NextDesktop: NextDesktop {
           compatible = "zmk,behavior-macro";
           label = "NEXTDESKTOP";
@@ -80,9 +81,9 @@
           tap-ms = <15>;
       };
 
-      ShowDesktop: ShowDesktop {
+      CreateDesktop: CreateDesktop {
           compatible = "zmk,behavior-macro";
-          label = "SHOWDESKTOP";
+          label = "CREATEDESKTOP";
           #binding-cells = <0>;
           bindings = <
               &macro_press LCTRL
@@ -95,9 +96,9 @@
           tap-ms = <15>;
       };
 
-      CloseApp: CloseApp {
+      DeleteDesktop: DeleteDesktop {
           compatible = "zmk,behavior-macro";
-          label = "CLOSEAPP";
+          label = "DELETEDESKTOP";
           #binding-cells = <0>;
           bindings = <
               &macro_press LCTRL

@@ -89,11 +89,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LC(LEFT_GUI)>,
+                <&kp LCTRL &kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp F4>,
                 <&macro_release>,
-                <&kp LC(LEFT_GUI)>;
+                <&kp LCTRL &kp LEFT_GUI>;
 
             label = "DELETEDESKTOP";
         };

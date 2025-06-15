@@ -96,6 +96,8 @@
                 <&kp LCTRL &kp LEFT_GUI>;
 
             label = "DELETEDESKTOP";
+            tap-ms = <0>;
+            wait-ms = <0>;
         };
 
         AltF4: AltF4 {

@@ -96,8 +96,8 @@
                 <&kp LCTRL &kp LEFT_GUI>;
 
             label = "DELETEDESKTOP";
-            tap-ms = <0>;
-            wait-ms = <0>;
+            tap-ms = <5>;
+            wait-ms = <10>;
         };
 
         AltF4: AltF4 {
@@ -147,11 +147,11 @@
 
         Second {
             bindings = <
-&kp F1      &kp F2     &kp F3        &kp F4        &kp F5           &kp F6          &mmv MOVE_UP     &kp F7          &kp F8         &kp F9        &kp F10    &kp F11    &kp F12
-&trans      &AltF4     &mkp LCLK     &mkp MCLK     &mkp RCLK        &mkp MB4        &mmv MOVE_DOWN   &kp PG_UP       &kp PAGE_DOWN  &kp HOME      &kp END    &kp MINUS  &kp EQUAL
-&trans      &kp GRAVE  &kp LEFT_GUI  &kp CAPSLOCK  &kp PRINTSCREEN  &mkp MB5        &mmv MOVE_LEFT   &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans     &trans
-&trans      &trans     &trans        &trans        &trans           &AppSwitcher    &mmv MOVE_RIGHT  &trans          &trans         &trans        &trans     &trans     &trans
-&kp C_MUTE  &trans     &trans        &trans        &trans           &trans          &mkp LCLK        &trans          &trans         &trans        &trans     &trans
+&kp F1      &kp F2     &kp F3        &kp F4        &kp F5           &kp F6          &mmv MOVE_UP     &kp F7          &kp F8         &kp F9        &kp F10         &kp F11         &kp F12
+&trans      &AltF4     &mkp LCLK     &mkp MCLK     &mkp RCLK        &mkp MB4        &mmv MOVE_DOWN   &kp PG_UP       &kp PAGE_DOWN  &kp HOME      &kp END         &kp MINUS       &kp EQUAL
+&trans      &kp GRAVE  &kp LEFT_GUI  &kp CAPSLOCK  &kp PRINTSCREEN  &mkp MB5        &mmv MOVE_LEFT   &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT       &trans          &trans
+&trans      &trans     &trans        &trans        &trans           &AppSwitcher    &mmv MOVE_RIGHT  &trans          &trans         &trans        &trans          &trans          &trans
+&kp C_MUTE  &trans     &trans        &trans        &trans           &trans          &mkp LCLK        &trans          &PrevDesktop   &NextDesktop  &DeleteDesktop  &CreateDesktop
             >;
 
             display-name = "Second";

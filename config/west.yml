@@ -6,11 +6,11 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    - name: gpeye
+      url-base: https://github.com/GPeye
   projects:
-    - name: zmk-nice-oled
-      remote: mctechnology17
+    - name: mario-peripheral-animation
+      remote: gpeye
       revision: main 
     - name: zmk
       remote: zmkfirmware

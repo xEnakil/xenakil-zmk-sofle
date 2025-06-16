@@ -157,8 +157,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB ON
-  - RGB BRI
   - RGB SPI
   - RGB SAI
   - RGB HUI
@@ -170,8 +170,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
-  - RGB BRD
   - RGB SPD
   - RGB SAD
   - RGB HUD

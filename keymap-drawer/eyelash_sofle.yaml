@@ -61,10 +61,10 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   Second:
   - F1
   - F2

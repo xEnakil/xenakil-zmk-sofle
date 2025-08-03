@@ -51,8 +51,8 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:volume-off$$
   - $$mdi:backspace-reverse-outline$$
   - Third
@@ -63,8 +63,8 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   Second:
   - '&AltF4'
   - {t: '`', s: '~'}

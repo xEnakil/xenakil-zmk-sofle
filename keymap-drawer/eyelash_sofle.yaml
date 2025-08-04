@@ -193,5 +193,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&PrevDesktop'
   - '&NextDesktop'
-  - '&PrevDesktop'
+  - '&DeleteDesktop'
   - '&CreateDesktop'
